@@ -3,7 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run",
+    "test:regression": "npm  t -- --env grepTags=@Regression,grepFilterSpecs=true",
+    "test:smoke": "npm t -- --env grepTags=@Smoke,grepFilterSpecs=true"
+
+
+
+
+
+
   },
   "repository": {
     "type": "git",
