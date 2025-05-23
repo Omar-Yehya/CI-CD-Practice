@@ -1,5 +1,9 @@
 node_modules/
 .env
 dist/
-coverag
+coverage/       
 .DS_Store
+cypress/screenshots/*
+cypress/videos/*
+cypress/reporters/*
+cypress/downloads/*
