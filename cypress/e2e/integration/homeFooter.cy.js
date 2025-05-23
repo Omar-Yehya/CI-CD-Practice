@@ -9,7 +9,7 @@ describe('TG100 G7 - Validate Base Page Footr', () => {
     })
     const homePageFooter = new HomePageFooter()
 
-    it('Validate Footer contains proper elements', () => {
+    it('Validate Footer contains proper elements', {tags: ['@Regression']}, () => {
         homePageFooter.getFooterLogo()
         homePageFooter.getAllFooterText()
         homePageFooter.getFooterTextingText().should('be.visible')
