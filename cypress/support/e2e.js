@@ -21,6 +21,8 @@ import registerCypressGrep from "@cypress/grep"
 registerCypressGrep()
 
 import './commands'
+import 'cypress-mochawesome-reporter/register';
+
 
 Cypress.on('uncaught:exception', (err, runnable) => {
   // returning false prevents Cypress from failing the test

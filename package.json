@@ -6,12 +6,6 @@
     "test": "cypress run",
     "test:regression": "npm  t -- --env grepTags=@Regression,grepFilterSpecs=true",
     "test:smoke": "npm t -- --env grepTags=@Smoke,grepFilterSpecs=true"
-
-
-
-
-
-
   },
   "repository": {
     "type": "git",
@@ -23,6 +17,7 @@
   "devDependencies": {
     "@cypress/grep": "^4.1.0",
     "cypress": "^14.4.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
     "cypress-real-events": "^1.14.0"
   }
 }
