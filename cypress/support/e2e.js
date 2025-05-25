@@ -14,14 +14,12 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-
-
-import "cypress-real-events";
-import registerCypressGrep from "@cypress/grep"
-registerCypressGrep()
-
-import './commands'
 import 'cypress-mochawesome-reporter/register';
+import registerCypressGrep from '@cypress/grep'
+import "cypress-real-events";
+import './commands'
+
+registerCypressGrep()
 
 
 Cypress.on('uncaught:exception', (err, runnable) => {
