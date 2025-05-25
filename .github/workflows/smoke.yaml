@@ -1,0 +1,26 @@
+name: Smoke Tests
+
+on: 
+  push: 
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 16 * * *'
+
+
+jobs:
+  cypress-run:
+  runs-on: ubuntu-latest
+
+
+steps:
+  - name: Checkout Code
+    uses: cypress-io/github-action@v6
+    with: 
+      browser: chrome
+      headed: false
+      command: npm run test:smoke
+  
+  - name: 
+
