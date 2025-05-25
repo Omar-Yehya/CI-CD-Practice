@@ -1,0 +1,32 @@
+name: Smoke Tests
+
+on: 
+  push: 
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 16 * * *'  # 10 AM CST
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run Cypress Smoke Tests
+        uses: cypress-io/github-action@v6
+        with: 
+          browser: chrome
+          headed: false
+          command: npm run test:smoke
+      
+      - name: Publish Test Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Cypress HTML Reports
+          path: cypress/reports/
+          if-no-files-found: ignore
