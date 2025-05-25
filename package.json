@@ -17,6 +17,7 @@
   "devDependencies": {
     "@cypress/grep": "^4.1.0",
     "cypress": "^14.4.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
     "cypress-real-events": "^1.14.0"
   }
 }
